@@ -31,11 +31,11 @@ const Home = () => {
     }
   };
 
-  const removeTag = (index : number) => {
-    const updatedTags = tags.filter(tag => tag.indexOf(tag) !== index)
-
-    setTags(updatedTags);
-  }
+  
+  const removeTag = (index: number) => {
+    const updated = tags.filter((_, i) => i !== index);
+    setTags(updated);
+  };
 
   return (
     <div className="tag">
